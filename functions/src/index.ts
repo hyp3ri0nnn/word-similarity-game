@@ -9,11 +9,17 @@
 
 import {onRequest} from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
+import { db } from "./firebase-init";
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
 
-export const helloWorld = onRequest((request, response) => {
+export const helloWorld = onRequest(async (request: object, response) => {
   logger.info("Hello logs!", {structuredData: true});
+  console.log(typeof request, typeof response)
+  // DO THE JOB
+  let testPath = db.collection('users')
+  await testPath.add({foo: 'bar'})
+
   response.send("Hello from Firebase!");
 });
