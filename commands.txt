@@ -1,0 +1,2 @@
+# Emulator start 
+firebase emulators:exec --project local-emulator-fce37 "npm run dev" --ui
