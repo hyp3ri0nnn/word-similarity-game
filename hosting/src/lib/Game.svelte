@@ -1,5 +1,5 @@
 <script lang="ts">
-    const serverWord = "";
+    const serverWord = "Test";
 </script>
 
 
