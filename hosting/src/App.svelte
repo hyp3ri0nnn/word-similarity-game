@@ -1,5 +1,6 @@
 <script lang="ts">
   import Game from './lib/Game.svelte'
+  import Invite from './lib/Invite.svelte';
   import StartGame from './lib/StartGame.svelte';
 </script>
 
@@ -7,6 +8,7 @@
 
   <div>
     <Game />
+    <Invite />
     <StartGame />
   </div>
 
