@@ -1,28 +1,20 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
   import Game from './lib/Game.svelte'
-    import Scores from './lib/Scores.svelte';
-    import Guess from './lib/Guess.svelte';
+  import StartGame from './lib/StartGame.svelte';
 </script>
 
 <main>
 
   <div>
     <Game />
-  </div>
-  <div>
-    <Guess />
-  </div>
-  <div>
-    <Scores />
+    <StartGame />
   </div>
 
 
 </main>
 
 <style>
+
   .logo {
     height: 6em;
     padding: 1.5em;
