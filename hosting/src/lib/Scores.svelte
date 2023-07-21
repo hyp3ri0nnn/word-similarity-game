@@ -1,22 +1,56 @@
 <script lang="ts">
-    const homeScore: number = 12;
-    const awayScore: number = 44;
-    const guessLeft: number = 2;
+    let homeScore: number = 12;
+    let awayScore: number = 44;
+    let guessLeft: number = 2;
+    const serverWord = "Climax";
+    let inputWord = ""
+    let wordSimilarity: Promise<number> ;
+
+    function checkSimilarity(): Promise<number> {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(23)
+            },2000)
+        });
+    }
+
+    async function sendInput() {
+        wordSimilarity = checkSimilarity();
+    }
+
+    let count = 0;
+
+
 </script>
 
 
 <div>
 
-    <h2>
-        Guess left {guessLeft}
-    </h2>
+    <h1>
+        {serverWord}
+    </h1>
 
-    <h3>
-        Your Score is {homeScore}
-    </h3>
 
-    <h3>
-        Opponent Score is {awayScore}
-    </h3>
+    {#await wordSimilarity}
+        <p> waiting... </p>
+    {:then number}
+        {#if number}
+            <h2>% {number}</h2>
+        {/if}
+    {/await}
 
+    <h3> {inputWord} </h3>
+    <form action="" on:submit|preventDefault={sendInput}>
+        <input type="text" bind:value={inputWord}>
+        <button type="submit"> Submit </button>
+    </form>
+
+
+<button on:click = {
+    () => {
+        count += 1;
+        }
+    }> 
+    Do states saved even change ? {count}
+</button>
 </div>

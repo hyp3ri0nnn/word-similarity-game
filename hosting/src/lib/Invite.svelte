@@ -18,10 +18,13 @@
         background-color: gray;
         margin: 6px;
         font-size: x-large;
+        position: relative;
     }
 
+    
+
     div {
-        border: 2px whitesmoke solid;
+        border: 3px whitesmoke solid;
         border-radius: 8px;
         position: absolute;
         margin: 6px;

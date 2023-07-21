@@ -39,6 +39,7 @@
     }
 
 
+
 </script>
 {#if gameState === "start"} 
     <StartScreen />
@@ -56,6 +57,7 @@
 }>
     change game state from {gameState} to {nextGameState}
 </button>
+
 
 <div>
     {gameState} {nextGameState}
