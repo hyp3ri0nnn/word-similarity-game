@@ -2,4 +2,3 @@
     import GameState from "./GameState.svelte";
 </script>
 
-<GameState />

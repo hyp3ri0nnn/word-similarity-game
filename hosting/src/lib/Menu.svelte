@@ -14,7 +14,7 @@
         },
     ]
     
-    let isMenuVisible = true;
+    let isMenuVisible = false;
 
     function toggleHamburger(event) {
         isMenuVisible = !isMenuVisible;
@@ -23,7 +23,7 @@
 
 <div >
     <button on:click={toggleHamburger}>
-        Menu
+        {isMenuVisible ? "Close" : "Open" }
     </button>
     <ul style:visibility={isMenuVisible ? 'visible' : 'hidden'}>
         {#each options as option }

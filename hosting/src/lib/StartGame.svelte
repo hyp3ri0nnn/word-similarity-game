@@ -3,7 +3,7 @@
 </script>
 
 
-<button on:click={changeToGame}>
+<button >
     Create Game
 </button>
 

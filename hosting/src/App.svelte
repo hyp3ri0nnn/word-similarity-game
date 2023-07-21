@@ -1,17 +1,11 @@
 <script lang="ts">
-  import Game from './lib/Game.svelte'
-  import Invite from './lib/Invite.svelte';
-  import StartGame from './lib/StartGame.svelte';
-  import Menu from './lib/Menu.svelte';
+  import Game from './lib/Game.svelte';
 </script>
 
 <main>
 
   <div>
     <Game />
-    <Menu />
-    <Invite />
-    <StartGame />
   </div>
 
 
